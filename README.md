@@ -55,7 +55,7 @@ console.log('This processes instantly restarts when a file changes.');
 Check if it's a known issue by running the command below:
 
 ```
-pnpm eslint-config-prettier src/**/*.tsx src/**/*.ts
+pnpm eslint-config-prettier src/**/\*.tsx src/**/\*.ts
 ```
 
 Modify or disable the rule in `.eslintrc.cjs`.
