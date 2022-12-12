@@ -49,12 +49,12 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
-    "format:staged": "pretty-quick --staged",
+    "format:staged": "pretty-quick --staged --no-restage --bail",
     "format": "prettier --write .",
     "lint:format": "prettier --cache --check .",
     "lint": "eslint --cache .",
     "test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
-    "tsc:check": "tsc",
+    "tsc:check": "tsc --pretty --noEmit",
     "vitest:run": "vitest run",
     "prepare": "husky install",
     "serve": "vite preview"
