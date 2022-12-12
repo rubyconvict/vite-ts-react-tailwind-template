@@ -49,3 +49,13 @@ Use this to restart your scripts instantly when a file changes:
 
 console.log('This processes instantly restarts when a file changes.');
 ```
+
+## In case of eslint rules conflicting with prettier
+
+Check if it's a known issue by running the command below:
+
+```
+pnpm eslint-config-prettier src/**/*.tsx src/**/*.ts
+```
+
+Modify or disable the rule in `.eslintrc.cjs`.

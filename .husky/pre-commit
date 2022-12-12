@@ -1,21 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-exec < /dev/tty && \
 pnpm pretty-quick --staged --no-restage --bail && \
-pnpm test && \
-git status && \
-echo "DOUBLE-CHECK THE FILES ABOVE" && \
-while true; do
-
-read -p "Do you want to proceed? (y/n) " yn
-
-case $yn in 
-    [yY] ) echo 'ok, proceeding...';
-        exit 0;;
-    [nN] ) echo 'exiting...';
-        exit 1;;
-    * ) echo 'invalid response';;
-esac
-
-done
+pnpm test

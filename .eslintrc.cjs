@@ -12,6 +12,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'prettier', // Make sure this is always the last element in the array (eslint-config-prettier)
   ],
   overrides: [
     {
